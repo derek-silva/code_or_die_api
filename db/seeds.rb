@@ -10,15 +10,15 @@ User.destroy_all
 MeetUp.destroy_all
 UserMeetUp.destroy_all
 
-kenny = User.new(name: "Kenny Yang", email: "kenny.yang@flatironschool.com", bio: "CODE OR DIE!")
-derek = User.new(name: "Derek Silva", email: "derek.silvag@flatironschool.com", bio: "CODE OR DIE!")
-chris = User.new(name: "Chris Arnold", email: "christopher.arnold@flatironschool.com", bio: "CODE OR DIE!")
+kenny = User.new(first_name: "Kenny", last_name: "Yang", user_name: "ky17", email: "kenny.yang@flatironschool.com", bio: "CODE OR DIE!")
+derek = User.new(first_name: "Derek", last_name: "Silva", user_name: "flexlutherr", email: "derek.silvag@flatironschool.com", bio: "CODE OR DIE!")
+chris = User.new(first_name: "Chris", last_name: "Arnold", user_name: "codefreak", email: "christopher.arnold@flatironschool.com", bio: "CODE OR DIE!")
 
 kenny.save
 derek.save
 chris.save 
 
-javascript_meetup = MeetUp.create(name: "JavaScript Meet Up", topic: "Vanilla JavaScript", address: "708 Main St.", time:"7:00 PM")
+javascript_meetup = MeetUp.create(name: "JavaScript Meet Up", topic: "Vanilla JavaScript", address: "708 Main St.", description:"You will have a good time", date: 'September 11, 2018', start_time: '7:00 PM', end_time: '8:00 PM')
 
 javascript_meetup.save
 

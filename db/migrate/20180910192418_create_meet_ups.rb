@@ -4,7 +4,10 @@ class CreateMeetUps < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :topic
       t.string :address
-      t.string :time
+      t.string :description
+      t.date :date
+      t.time :start_time
+      t.time :end_time
 
       t.timestamps
     end
