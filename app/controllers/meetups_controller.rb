@@ -9,17 +9,18 @@ class MeetupsController < ApplicationController
 		render json: meetUp
 	end 
 
-	def create 
-		meetUp = MeetUp.new(meetUp_params)
+	def create
+		meetUp = MeetUp.new({topic: params[:topic], address: params[:address], description: params[:description], date: params[:date], start_time: params[:start_time], end_time: params[:end_time]})
 		if meetUp.valid?
-			meetUp.save
+			m = meetUp.save
+			UserMeetUp.create(user_id: params[:user], meet_up_id: MeetUp.all.last.id)
 			render json: meetUp
 		else render json: meetUp.errors
 		end
 	end 
 
 	private 
-	def meetUp_params 
-		params.require(:meetUp).permit(:topic, :address, :description, :date, :start_time, :end_time)
+	def meetUp_params
+		params.permit(:topic, :address, :description, :date, :start_time, :end_time, :user)
 	end 
 end
