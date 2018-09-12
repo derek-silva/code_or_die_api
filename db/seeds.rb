@@ -18,7 +18,7 @@ kenny.save
 derek.save
 chris.save 
 
-javascript_meetup = MeetUp.create(name: "JavaScript Meet Up", topic: "Vanilla JavaScript", address: "708 Main St.", description:"You will have a good time", date: 'September 11, 2018', start_time: '7:00 PM', end_time: '8:00 PM')
+javascript_meetup = MeetUp.create(topic: "Vanilla JavaScript", address: "708 Main St.", description:"You will have a good time", date: 'September 11, 2018', start_time: '7:00 PM', end_time: '8:00 PM')
 
 javascript_meetup.save
 

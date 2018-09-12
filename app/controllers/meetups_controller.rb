@@ -6,7 +6,7 @@ class MeetupsController < ApplicationController
 	
 	def show 
 		meetUp = MeetUp.find(params[:id])
-		render json: meetup
+		render json: meetUp
 	end 
 
 	def create 
@@ -20,6 +20,6 @@ class MeetupsController < ApplicationController
 
 	private 
 	def meetUp_params 
-		params.require(:meetUp).permit(:name, :topic, :address, :description, :date, :start_time, :end_time)
+		params.require(:meetUp).permit(:topic, :address, :description, :date, :start_time, :end_time)
 	end 
 end

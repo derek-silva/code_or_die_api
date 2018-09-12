@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2018_09_10_192444) do
   enable_extension "plpgsql"
 
   create_table "meet_ups", force: :cascade do |t|
-    t.string "name"
     t.string "topic"
     t.string "address"
     t.string "description"
