@@ -15,25 +15,24 @@ ActiveRecord::Schema.define(version: 2018_09_10_192444) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "meet_ups", force: :cascade do |t|
+  create_table "meetups", force: :cascade do |t|
     t.string "topic"
     t.string "address"
     t.string "description"
     t.date "date"
     t.time "start_time"
     t.time "end_time"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_meet_ups", force: :cascade do |t|
-    t.bigint "meet_up_id"
+  create_table "user_meetups", force: :cascade do |t|
+    t.bigint "meetup_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["meet_up_id"], name: "index_user_meet_ups_on_meet_up_id"
-    t.index ["user_id"], name: "index_user_meet_ups_on_user_id"
+    t.index ["meetup_id"], name: "index_user_meetups_on_meetup_id"
+    t.index ["user_id"], name: "index_user_meetups_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,7 +40,6 @@ ActiveRecord::Schema.define(version: 2018_09_10_192444) do
     t.string "last_name"
     t.string "user_name"
     t.string "email"
-    t.integer "meet_up_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

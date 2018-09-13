@@ -1,6 +1,6 @@
-class CreateMeetUps < ActiveRecord::Migration[5.2]
+class CreateMeetups < ActiveRecord::Migration[5.2]
   def change
-    create_table :meet_ups do |t|
+    create_table :meetups do |t|
 
       t.string :topic
       t.string :address
@@ -8,7 +8,6 @@ class CreateMeetUps < ActiveRecord::Migration[5.2]
       t.date :date
       t.time :start_time
       t.time :end_time
-      t.integer :user_id
 
       t.timestamps
     end
