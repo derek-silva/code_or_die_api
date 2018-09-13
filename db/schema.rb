@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_09_10_192444) do
     t.date "date"
     t.time "start_time"
     t.time "end_time"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,7 +41,7 @@ ActiveRecord::Schema.define(version: 2018_09_10_192444) do
     t.string "last_name"
     t.string "user_name"
     t.string "email"
-    t.string "bio"
+    t.integer "meet_up_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

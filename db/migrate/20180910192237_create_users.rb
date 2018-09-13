@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :user_name
       t.string :email
-      t.string :bio
+      t.integer :meet_up_id
 
       t.timestamps
     end

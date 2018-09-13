@@ -10,9 +10,9 @@ User.destroy_all
 MeetUp.destroy_all
 UserMeetUp.destroy_all
 
-kenny = User.new(first_name: "Kenny", last_name: "Yang", user_name: "ky17", email: "kenny.yang@flatironschool.com", bio: "CODE OR DIE!")
-derek = User.new(first_name: "Derek", last_name: "Silva", user_name: "flexlutherr", email: "derek.silvag@flatironschool.com", bio: "CODE OR DIE!")
-chris = User.new(first_name: "Chris", last_name: "Arnold", user_name: "codefreak", email: "christopher.arnold@flatironschool.com", bio: "CODE OR DIE!")
+kenny = User.new(first_name: "Kenny", last_name: "Yang", user_name: "ky17", email: "kenny.yang@flatironschool.com")
+derek = User.new(first_name: "Derek", last_name: "Silva", user_name: "flexlutherr", email: "derek.silvag@flatironschool.com")
+chris = User.new(first_name: "Chris", last_name: "Arnold", user_name: "codefreak", email: "christopher.arnold@flatironschool.com")
 
 kenny.save
 derek.save
